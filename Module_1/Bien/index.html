@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // let number = 1; // biến là 1 tên gọi của vùng nhớ chứa dữ liệu
+    // number = 20;
+    // console.log(number); // 20
+    /*
+    Có thể thay đổi giá trị (~ gán) cho 1 biến (trừ khi khai báo bằng const)
+    Cú pháp:
+    let <ten_bien> = <gia_tri>;
+
+    Có thể sử dụng: let, var hoặc const
+    const là hằng số
+
+     */
+    // var name = "Trương Đăng Vũ Ning";
+    // console.log(name);
+
+    // const PI = 3.14;
+    // console.log(PI);
+
+    // const CLASS_NAME = "C06";
+    // CLASS_NAME = "C06.5"; // ~ error
+
+
+    /*
+     var ~ thuộc bản đâu tiên -> có những hạn chế:
+     + Có thể sử dụng biến trước khi khai báo.
+     + Cho phép khai báo lại biến
+     + var không bị giới hạn bởi block scope
+     */
+
+    /*
+    let ~ sinh ra từ bản update ES6 (ECMA) -> giải quyết những hạn chế của var -> lời khuyên nên sử let
+     + Không sử dụng biến trước khi khai báo
+     + Không cho phép khai báo lại biến, chỉ cho phép gán lại
+     + bị giới hạn bởi block scope
+     */
+
+    //  const tương đương let: KHÔNG THÊ GÁN LẠI
+
+
+    /*
+      Quy tắc đặt tên biến:
+      + Danh từ
+      + Không cho phép các ký tự đặc biệt ngoại trừ (_ và $)
+      + Nếu không biết biến để làm gì -> xem lại cách đặt tên
+      + Đặt tên biến theo CamelCase
+      + Tránh các từ khóa
+      + Không được bắt đầu bằng số
+     */
+
+    // let nameOfClass = "C06";
+    // let tenCuaLop = "C06";
+    // let name1 = 10;
+
+    // Kiểu dữ liệu
+    /*
+    // Kiểu số (number)
+    let number = 10;
+    let number1 = 1.5; // 1,5
+    let number2 = -1;
+    let number3 = 0;
+    console.log(typeof number);
+
+    // Kiểu chuỗi (string)
+    let name = "Trương Đăng Vũ Linh";
+    let nameOfClass = 'C06';
+    let nameOfSchool = `VNU`;
+    console.log(typeof name);
+
+    // Kiểu logic (boolean): chỉ có 2 giá trị true of false
+    let isSick = true;
+    let isHappy = false;
+    console.log(typeof isSick);
+
+
+    // Toán tử: là các ký tự đặc sử dụng để tương tác các biến và giá trị
+    // Toán từ toán học: +  -  *  /  %  ++ --
+    let n1 = 2;
+    let n2 = 5;
+    let r = n1 % n2;
+    console.log(r); // 2
+
+    let n3 = 15;
+    ++n3; // tăng lên 1 đơn vị
+    //   -- giảm 1 đơn vị
+    console.log(n3);
+
+    // Tiền tố và hậu tố
+
+
+    // Toán tử gán: =  +=  -=   *=  /=    %=
+    let type = "Quần";
+    type = "Áo";
+
+    let num = 1;
+    // num += 10; // ~ num = num + 10; ~ 1 + 10
+    num = num + 10;
+    console.log(num);
+
+     */
+
+    // let firstName = "VU";
+    // let lastName = " NING";
+    // let fullName = firstName / lastName;
+    // console.log(fullName); // -> NaN : Not a Number
+
+    // let n1 = "1";
+    // let n2 = "2";
+    // let r = n1 + n2; // "12"
+    // console.log(r);
+
+    // let result = '9' / '3'; // Khi chuỗi số thực hiện các phép ngoài dấu + thì tự động chuyển thành số
+    // console.log(result);
+
+    /*
+    NOTE: TẤT CẢ NHỮNG DỮ LIỆU JS LẤY ĐƯỢC TỪ HTML ĐỀU LÀ CHUỖI
+    Để chuyển đổi chuỗi số thành số thì thêm dấu công đằng trước hoặc sử Number.parseInt
+     */
+    // nhập 2 số từ prompt và thực hiện in ra tổng 2 số đó;
+    // let a = Number.parseInt(prompt("Nhập số a")); // "3"
+    // let b = +prompt("Nhập số b"); // "4"
+    // alert(a + b); // "34"
+
+    // Toán tử so sánh: luôn luôn trả lại boolean
+    // >  <  >=  <=  ==  != (===   !==)
+
+    // Toán tử === và !== sẽ kiểu tra thêm cả kiểu dũ liệu
+    let a = 10;
+    let b = "10";
+    console.log(a != b); // 10 != 10 -> false
+    console.log(a !== b); // 10 != 10 (false) và check thêm số != chữ (true) -> true
+
+
+    // console.log(a == b); // true
+    // console.log(a === b); // false
+
+
+
+    // let a = 10;
+    // let b = 12;
+    // console.log(a > b); // false
+    // console.log(b >= a); // true
+    // console.log(a == b); // false
+    // console.log(a != b); // true
+</script>
+</body>
+</html>

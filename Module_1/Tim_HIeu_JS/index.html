@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm hiểu JS</title>
+</head>
+<body>
+
+<input type="text" placeholder="Username" id="username">
+<button onclick="hienThiDuLieu()">Nhấn</button>
+<h1 id="r"></h1>
+<script>
+
+    // let data = prompt("Nhập tên của bạn");
+    console.log("Vũ Ning");
+    alert()
+    010101
+
+    // Bài toán: Người nhập dữ liệu vào ô input và click nút để hiển thị
+
+    // Tự tạo hàm
+    function hienThiDuLieu() {
+                   //     lấy ô input                 .lấy giá trị ô input
+        let data = document.getElementById("username").value;
+        // alert(data);
+
+        //   lấy thẻ h                hiển thị data vào trong thẻ h
+        document.getElementById("r").innerText = data;
+    }
+
+    /*
+    ĐÂY LÀ COMMENT
+    NHIỀU DÒNG trong JS
+     */
+
+    // đây là comment 1 dòng trong JS
+
+    // Khai báo biến
+    // let name = "Vũ Linh";
+    // let number1 = 1;
+    // let number2 = 2;
+
+    // log + tab: gõ nhanh tab
+    // console.log(name);
+    // alert("Xin chào thế giới");
+    // document.write("Xin chào thế giới");
+
+    // let name = prompt("Nhập tên của bạn"); // let name = "Ning"
+    // alert(name);
+
+    // let n1 = 10;
+    // console.log("n1 - login: " + n1);
+    // let n2 = 20;
+    // console.log("n2 - login: " + n2);
+    // let result = n1 + n2;
+    // console.log("n3: " + result);
+    // alert(result);
+
+</script>
+
+<!-- sử dụng thông qua sự kiện của HTML ~ inline:
+click vào 1 thành phần gì đó: onclick
+thay đổi giá trị của 1 ô input: onchange
+di chuột qua 1 thành phần gì đó: onmouseover
+-->
+<!--<button onclick="alert('Xin chào thế giới')">Click me</button>-->
+
+<!--<a href="https://andy.codegym.vn/center/1/groups/633/attendances" onclick="alert('Tôi click thẻ a')">Hello</a>-->
+
+<!--<input type="text" placeholder="Input demo" onchange="alert('Tôi là onchange')">-->
+<!--<input type="text" placeholder="oninput demo" oninput="alert('Tôi là oninput')">-->
+
+<!--<h1 onmouseover="alert('Tôi là onmouseover')">Meo meo</h1>-->
+
+<!-- Internal -->
+<!--<script>-->
+<!--    // Bất cứ chữ ngoài cú pháp viết trong JS: thì có thể là chuỗi ~ string-->
+<!--    alert("Xin chào thế giới!")-->
+<!--</script>-->
+
+<!-- External -->
+<!--<script src="index.js"></script>-->
+</body>
+</html>
