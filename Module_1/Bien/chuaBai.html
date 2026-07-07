@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // Ưu tiên trong ngoặc > nhân chia > từ trái qua phải > từ trái qua phải
+    // 10 * (2 + '3') - '30' + 20 / '5' - 1 - ('11' + 5 / '6')
+    /*
+     Bước 1: Ưu tiên trong ngoặc trước
+     = 10 * '23' - '30' + 20 / '5' - 1 - '110.83333333333'
+     Bước 2: Nhân chia trước, cộng trừ sau
+     = 230 - '30' + 4 - 1 - '110.83333333333'
+     = 203 - '110.83333333333' = 92.1666666667
+     */
+
+    // console.log(10 * (2 + '3') - '30' + 20 / '5' - 1 - ('11' + 5 / '6'))
+
+    /*
+    Bài 4 — Tính diện tích và chu vi hình chữ nhật (3 điểm): Dùng prompt() để nhận chiều dài và chiều rộng từ người dùng.
+    Tính diện tích (dài × rộng) và chu vi (2 × (dài + rộng)), sau đó in kết quả ra màn hình bằng console.log().
+     */
+    let chieuDai = +prompt("Nhập chiều dài:");
+    let chieuRong = Number.parseInt(prompt("Nhập chiều rộng:"));
+    let dienTich = chieuDai * chieuRong;
+    let chuVi = (chieuDai + chieuRong) * 2;
+    console.log(`Diện tích và chu vi của hcn(${chieuDai} x ${chieuRong}) lần lượt là: ${dienTich}, ${chuVi}`);
+    </script>
+</body>
+</html>

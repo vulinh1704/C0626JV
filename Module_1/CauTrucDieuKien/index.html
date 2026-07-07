@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // let diemLyThuyet = 50;
+    // let diemThucHanh = 80;
+    // alert(diemLyThuyet > 60 && diemThucHanh > 60); // true && true => true
+    // && (Toán từ và: Chỉ cần 1 trong 2 false -> false
+
+
+    // let diemTrungBinh = 50;
+    // let isDutLot = true;
+    // alert(diemTrungBinh > 60 || isDutLot); // true || false => true
+    // || (Toán tử hoặc): chỉ cần 1 trong 2 là true -> Kết quả true
+
+    // let isSick = false;
+    // alert(!isSick);
+    // Phủ định của giá trị đang có
+
+
+    /*
+    if(<dieu_kien>) {
+       <khoi_lenh_thuc_thi>
+    }
+    -> Để thực hiện <khoi_lenh_thuc_thi> thì <dieu_kien> = true
+
+
+     if(<dieu_kien>) {
+       <khoi_lenh_thuc_thi_1>
+    } else {
+       <khoi_lenh_thuc_thi_2>
+    }
+    -> Nếu <dieu_kien> trả true thì thực hiện <khoi_lenh_thuc_thi_1>, ngược lại thì thực thi  <khoi_lenh_thuc_thi_2>
+     */
+
+    // console.log("Bắt đầu chương trình");
+    // let diem = +prompt("Nhập điểm của bạn");
+    //
+    // if (diem >= 5) {
+    //     console.log("Bạn đã qua môn!");
+    // } else {
+    //     console.log("Bạn không qua môn!")
+    // }
+    // => Nếu điểm lớn hơn hoặc bằng 5 thì qua môn, ngược lại thì không qua môn.
+    // 1000 lines code
+    // console.log("Chương trình kết thúc.");
+
+    // Bài tập: Nhập vào tuổi nếu lớn hơn hoặc bằng 18 thì vào bar, ngược lại thì không được vào bar theo 2 cách.
+    // let tuoi = +prompt("Nhập tuổi của bạn")
+    // // C1
+    // if (tuoi >= 18) {
+    //     console.log("Đi vào bar")
+    // }
+    // if (tuoi < 18) {
+    //     console.log("Ko được vào bar")
+    // }
+    //
+    // // C2:
+    // if (tuoi >= 18) {
+    //     console.log("Đi vào bar")
+    // } else {
+    //     console.log("không được vào bar");
+    // }
+
+
+    /*
+      Cấu trúc if bậc thang
+    if(<dieu_kien>) {
+       <khoi_lenh_thuc_thi_1>
+    } else if (<dieu_kien_2>) {
+       <khoi_lenh_thuc_thi_2>
+    } else if (dieu_kien_3) {
+       <khoi_lenh_thuc_thi_3>
+    } else {
+        <khoi_lenh_thuc_thi_4>
+    }
+    > Nếu <dieu_kien> trả true thì thực hiện <khoi_lenh_thuc_thi_1>
+     nếu không thì <dieu_kien_2> true thì thực thi  <khoi_lenh_thuc_thi_2>
+     ...
+     nếu không vào các trường hợp nào bên trên thì vào <khoi_lenh_thuc_thi_4> trong else (nếu có)
+     */
+
+    // Nhập vào điểm và in ra điểm chữ
+    // let diem = +prompt("Nhập điểm: ");
+    // if(diem >= 8.5 && diem <= 10) { // diem chạy từ 8.5 - 10
+    //     alert("A");
+    // } else if (diem >= 7.0 && diem <= 8.4) {
+    //     alert("B");
+    // } else if(diem >= 5.5 && diem <= 6.9) {
+    //     alert("C")
+    // } else if(diem >= 4.0 && diem <= 5.4) {
+    //     alert("D")
+    // } else if(diem < 4.0 && diem >= 0) {
+    //     alert("F");
+    // } else {
+    //     alert("Điểm không hợp lệ");
+    // }
+
+    // Có lồng nhiều điều kiện nhưng để sạch code chỉ nên lồng 2 if
+    // let tuoi = 18;
+    // let coTien = false;
+    //
+    // if (tuoi >= 18) {
+    //     if (coTien) {
+    //         alert("Vào bar quẩy")
+    //     } else {
+    //         alert("Có tuổi nhưng k có tiền")
+    //     }
+    // }
+
+    // if (tuoi >= 18) {
+    //     if (coTien) {
+    //         alert("Vào bar quẩy")
+    //     }
+    // }
+    // // <=> &&
+    // if(tuoi >= 18 && coTien) {
+    //     alert("Vào bar quẩy");
+    // }
+
+
+    // If trong Js
+    // let diem = 10;
+    // if(diem > 5) alert("Pass");
+
+
+    // let a = "false";
+    /*
+     Trong JS <dieu_kien> trong ctdk khi gặp 6 giá trị sau sẽ tự chuyển thành false: 0, null, undefined, '', NaN, false .
+     Còn lại sẽ tự động chuyển thành true
+     */
+
+    // if(a) { // <dieu_kien> phải là boolean
+    //     alert("Hi");
+    // }
+
+
+
+    let diem = 10;
+    let ketQua = "";
+    if (diem >= 5) {
+        ketQua = "Đỗ";
+    } else {
+       ketQua = "Trượt";
+    }
+    alert(ketQua);
+    // <=>
+    // Toán tử 3 ngôi
+    let ketQua2 = (diem > 5) ? "Do" : "Truot";
+    alert(ketQua2);
+
+    
+
+</script>
+</body>
+</html>

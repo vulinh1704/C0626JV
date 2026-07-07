@@ -36,12 +36,14 @@
      + var không bị giới hạn bởi block scope
      */
 
+
     /*
     let ~ sinh ra từ bản update ES6 (ECMA) -> giải quyết những hạn chế của var -> lời khuyên nên sử let
      + Không sử dụng biến trước khi khai báo
      + Không cho phép khai báo lại biến, chỉ cho phép gán lại
      + bị giới hạn bởi block scope
      */
+
 
     //  const tương đương let: KHÔNG THÊ GÁN LẠI
 
@@ -51,7 +53,7 @@
       + Danh từ
       + Không cho phép các ký tự đặc biệt ngoại trừ (_ và $)
       + Nếu không biết biến để làm gì -> xem lại cách đặt tên
-      + Đặt tên biến theo CamelCase
+      + Đặt tên biến theo camelCase
       + Tránh các từ khóa
       + Không được bắt đầu bằng số
      */
@@ -135,14 +137,8 @@
     // Toán tử === và !== sẽ kiểu tra thêm cả kiểu dũ liệu
     let a = 10;
     let b = "10";
-    console.log(a != b); // 10 != 10 -> false
-    console.log(a !== b); // 10 != 10 (false) và check thêm số != chữ (true) -> true
-
-
-    // console.log(a == b); // true
-    // console.log(a === b); // false
-
-
+    console.log(a != b); // false
+    console.log(a !== b); // true
 
     // let a = 10;
     // let b = 12;
@@ -150,6 +146,19 @@
     // console.log(b >= a); // true
     // console.log(a == b); // false
     // console.log(a != b); // true
+
+
+    let firstName = "Vũ";
+    let lastName = "Ning";
+    let className = "C06";
+    // Tạo chuỗi: Vũ Ning học lớp C06. Ning chào mọi người người.
+    // let content = firstName + lastName + "học lớp C06. " + lastName + " chào mọi người";
+
+    // Template literal
+    let content = `${firstName} ${lastName} học lớp c06. ${lastName} chào mọi người.`;
+
+
+    // NaN (Not a Number)
 </script>
 </body>
 </html>
