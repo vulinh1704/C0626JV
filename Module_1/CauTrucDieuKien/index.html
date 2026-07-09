@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<!--HTML-->
 
 <script>
     // let diemLyThuyet = 50;
@@ -141,19 +143,48 @@
 
 
 
-    let diem = 10;
-    let ketQua = "";
-    if (diem >= 5) {
-        ketQua = "Đỗ";
-    } else {
-       ketQua = "Trượt";
-    }
-    alert(ketQua);
-    // <=>
-    // Toán tử 3 ngôi
-    let ketQua2 = (diem > 5) ? "Do" : "Truot";
-    alert(ketQua2);
+    // let diem = 10;
+    // let ketQua = "";
+    // if (diem >= 5) {
+    //     ketQua = "Đỗ";
+    // } else {
+    //    ketQua = "Trượt";
+    // }
+    // alert(ketQua);
+    // // <=>
+    // // Toán tử 3 ngôi
+    // let ketQua2 = (diem > 5) ? "Do" : "Truot";
+    // alert(ketQua2);
 
+
+    let ngay = +prompt("Nhập ngày: ");
+    // if(ngay === 1) {
+    //     console.log("Chủ nhật");
+    // } else if(ngay === 2) {
+    //     console.log("Thứ High")
+    // } else if(ngay === 3) {
+    //     console.log("Thứ Bar")
+    // } else {
+    //     console.log("Không có ngày này")
+    // }
+
+    // <=>
+    switch (ngay) {
+        case 1: // <=> if(ngay === 1)
+            console.log("Chủ nhật");
+            break; // dừng lại
+        case 2:
+            console.log("Thứ High");
+            break;
+        case 3:
+            console.log("Thứ Bar");
+            break;
+        default: // mặc định <=> else
+            console.log("Không có ngày này");
+            break;
+    }
+
+    // switch-case sẽ chỉ sử dụng để so sánh bằng
     
 
 </script>
