@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    /*
+    console.log(0)
+    console.log(1)
+    console.log(2)
+    console.log(3)
+    console.log(4)
+    console.log(5)
+    console.log(6)
+    console.log(7)
+    console.log(8)
+    console.log(9)
+    console.log(10)
+    console.log(11)
+    console.log(12)
+     */
+
+    // for (let i = 1; i <= 10; i++) {
+    //     if (i % 2 === 0) {
+    //         console.log(i);
+    //     }
+    // }
+
+    // gõ nhanh for: fori + tab
+
+    // In ra các số lẻ từ 10 đến 30;
+    // for (let i = 10; i <= 30; i++) {
+    //     if(i % 2 !== 0) {
+    //         console.log(i);
+    //     }
+    // }
+
+    // for (let i = 11; i <= 30; i = i + 2) {
+    //     console.log(i);
+    // }
+
+    // In ra các số chạy từ 10 đến 1;
+    // for (let i = 10; i >= 1; i--) { // i = 1 <= 10 (true)
+    //     console.log(i); // 10 9 8 ... 1 0 -1
+    // }
+
+    // Đếm từ 1 đến 100 có bao nhiêu số chẵn;
+    // let count = 0;
+    // for (let i = 1; i <= 100; i++) {
+    //   if(i % 2 === 0) {
+    //       count++;
+    //   }
+    // }
+    // console.log(`Từ 1 đến 100 có ${count} số chẵn`);
+
+
+    // Cú pháp hợp nhưng đây là sẽ vòng lặp vô tận
+    // for (;;) {
+    // }
+
+    // Kiểm tra kỹ logic vòng lặp tránh vòng lặp vô tận.
+
+
+    // break và continue
+
+    // Khi gặp từ khóa break trong vòng lặp thì lập tức sẽ bị dừng vòng lặp.
+    // for (let i = 1; i <= 10; i++) {
+    //     if (i === 5) {
+    //         break;
+    //     }
+    //     console.log(i);
+    // }
+
+    /*
+     continue: Khi gặp từ khóa này vòng lặp sẽ ngay lập tức bỏ qua LƯỢT LẶP hiện tại
+     và chuyển qua lượt lặp tiếp theo
+     */
+    // for (let i = 1; i <= 10; i++) { // i = 5
+    //     if (i === 4) {
+    //         continue;
+    //     }
+    //     console.log(i); // 1 2 3 5
+    // }
+    // In ra các số chẵn từ 1 đến 10 sử dụng continue.
+    // for (let i = 1; i <= 10; i++) { // i = 2 <= 10 (true)
+    //     if (i % 2 === 1) { // 2 % 2 === 1 (false)
+    //         continue;
+    //     }
+    //     console.log(i); // 2
+    // }
+
+    // In ra bảng cửu chương 5
+    // for (let i = 1; i <= 10; i++) {
+    //     let result = 5 * i;
+    //     console.log(`5 x ${i} = ${result}`);
+    // }
+
+    // Vòng lặp lồng nhau
+
+    // In ra bảng cửu chương
+    for (let i = 1; i <= 10; i++) { // let i = 3 <= 10 (true)
+        for (let j = 1; j <= 10; j++) { // let j = 11 <= 10 (false)
+            let result = i * j; // result = i * j = 2 * 10
+            console.log(`${i} x ${j} = ${result}`);
+        }
+        console.log("============")
+    }
+    // Chỉ nên 2 vòng lặp lồng nhau
+    // Tách hàm -> đơn giản hóa
+
+
+    // Note: break và continue thì chỉ có tác dụng với vòng lặp gần nhất
+    // while và do while và chữa bài
+
+
+    // Vòng lặp in ra danh sách bài viết -> Vòng lặp lấy ra bình luận
+</script>
+</body>
+</html>
