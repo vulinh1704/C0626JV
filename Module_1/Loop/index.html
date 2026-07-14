@@ -102,13 +102,13 @@
     // Vòng lặp lồng nhau
 
     // In ra bảng cửu chương
-    for (let i = 1; i <= 10; i++) { // let i = 3 <= 10 (true)
-        for (let j = 1; j <= 10; j++) { // let j = 11 <= 10 (false)
-            let result = i * j; // result = i * j = 2 * 10
-            console.log(`${i} x ${j} = ${result}`);
-        }
-        console.log("============")
-    }
+    // for (let i = 1; i <= 10; i++) { // let i = 3 <= 10 (true)
+    //     for (let j = 1; j <= 10; j++) { // let j = 11 <= 10 (false)
+    //         let result = i * j; // result = i * j = 2 * 10
+    //         console.log(`${i} x ${j} = ${result}`);
+    //     }
+    //     console.log("============")
+    // }
     // Chỉ nên 2 vòng lặp lồng nhau
     // Tách hàm -> đơn giản hóa
 
@@ -118,6 +118,195 @@
 
 
     // Vòng lặp in ra danh sách bài viết -> Vòng lặp lấy ra bình luận
+
+
+    // In ra từ 1 đến 10 với vòng while
+    // let count = 1;
+    // while (count <= 10) {
+    //     console.log(count);
+    //     count++;
+    // }
+
+    /*
+    Bài tập: Sử dụng vòng lặp while.
+    Cho người dùng nhập vào các số đến khi nào tổng của các số đó chia hết cho 7.
+     */
+
+    // let total = 0;
+    // while (true) {
+    //     let number = +prompt("Nhâp 1 số bất kỳ: ");
+    //     total = total + number; // <=> total += number;
+    //     if(total % 7 === 0) {
+    //         break;
+    //     }
+    // }
+    // alert(`Tổng các số bạn nhập là ${total}`);
+
+
+    // let tich = 1;
+    // while (tich % 7 !== 0) {
+    //     let number = parseInt(prompt("Mời bạn nhập 1 số bất kỳ"));
+    //     tich *= number;
+    // }
+
+
+    /*
+    do {
+        <khoi_lenh_thuc_thi>
+    } while (dieu_kien_lap>);
+
+    => Với do...while dù <dieu_kien_lap> đúng hay sai thì <khoi_lenh_thuc_thi> cũng sẽ thực hiện ít nhất 1 lần
+     */
+
+    // let i = 10;
+    // do {
+    //     console.log(`i = ${i}`);
+    // } while (i < 5); // 10 < 5 (false)
+
+
+    /*
+    Có 1 menu như sau:
+    ============= My Menu ===============
+    1. Thêm sản phẩm
+    2. Xóa sản phẩn
+    0. Thoát
+
+    Sử dụng do...while hiển thị menu và yêu cầu người dùng nhập vào lựa chọn đến khi nhập 0 thi dừng.
+     */
+    //
+    // let choice;
+    // do {
+    //     alert(`
+    //     ============= My Menu ===============
+    //     1. Thêm sản phẩm
+    //     2. Xóa sản phẩn
+    //     0. Thoát
+    //     `);
+    //     choice = +prompt("Nhập lựa chọn của bạn");
+    //     switch (choice) {
+    //         case 1:
+    //             alert("Thêm sản phẩm");
+    //             break;
+    //         case 2:
+    //             alert("Tính năng Xóa");
+    //             break;
+    //         case 0:
+    //             alert("Bye");
+    //             break;
+    //         default:
+    //             alert("Không có lựa chọn này!");
+    //     }
+    // } while (choice !== 0);
+
+
+    /*
+    Bài 1 — Bội số (1 điểm): Nhập một số nguyên, dùng vòng lặp tìm 20 bội số đầu tiên của số đó và in kết quả ra màn hình.
+    (Ví dụ: nhập 3 → in ra 3, 6, 9, 12, 15,..., 60)
+     */
+
+    /*
+    let so = +prompt("Nhập vào 1 số bất kỳ");
+    let soBoi = 1;
+    let temp = 1;
+    while (soBoi <= 20) {
+        if(temp % so === 0) {
+            document.write(`<h1>${temp}</h1>`);
+            soBoi++;
+        }
+        temp++;
+    }
+     */
+
+    // let number = +prompt("Nhập vào 1 số bất kỳ");
+    // let count = 1;
+    // let result = number;
+    // while (count <= 20) {
+    //     document.write(`<h1>${result}</h1>`);
+    //     result = result + number;
+    //     count++;
+    // }
+
+    /*
+    Bài 2 — Đếm từ và ký tự (2 điểm): Nhập một câu bất kỳ, đếm xem câu đó có bao nhiêu từ và bao nhiêu ký tự, rồi in kết quả.
+    (Ví dụ: nhập "Truong Linh Vũ" → Số từ: 2, số ký tự: 11)
+     */
+    //      Truong Ning
+    //Index 0123456
+
+    // let str = prompt("Nhập một chuỗi bất kỳ: ");
+    // str = str.trim(); // cắt dấu cách đầu cuối;
+    // let count;
+    // if(str.length !== 0) {
+    //     count = 1;
+    // } else {
+    //     count = 0;
+    // }
+    // for (let i = 0; i < str.length; i++) {
+    //     if(str.charAt(i) === " ") {
+    //         count++;
+    //     }
+    // }
+    //
+    // console.log(`Số từ là: ${count}`);
+
+
+    // Nhập vào 1 số và in ra dãy Fibonacci nhỏ hơn số đó.
+
+    // 0  1  1  2  3  5  8  13  21
+    // f1 f2 fn
+    //    f1 f2 fn
+    //       f1 f2 fn
+
+    // f1 = f2 (Cũ)
+    // f2 = fn (Cũ)
+    // fn = f1 + f2
+
+    // let number = +prompt("Nhập vào số bất kỳ: "); // 20
+    // let f1 = 0;
+    // let f2 = 1;
+    // console.log(f1); // 0
+    // console.log(f2); // 1
+    // let fn = f1 + f2; // fn = 0 + 1 = 1;
+    // while (fn <= number) { // 8 <= 20 (true)
+    //     console.log(fn); // 1 2 3 5 8
+    //     f1 = f2; // f1 = 3
+    //     f2 = fn; // f2 = 5
+    //     fn = f1 + f2; // fn = 3 + 5 = 8
+    // }
+
+
+    // chạy từ 1*2 cộng dôn n * (n + 1)
+    // let number = +prompt("Nhập vào n: ");
+    // let i = 1;
+    // let total = 0;
+    // while (i <= number) {
+    //     total += i * (i + 1); // <=> total = total + (i * (i + 1))
+    //     i++;
+    // }
+    // console.log(`total = ${total}`);
+
+    // let total = 0;
+    // for (let i = 1; i <= number; i++) {
+    //     total += i * (i + 1);
+    // }
+    // console.log(`total = ${total}`);
+
+    // S = 1/1³ + 1/2³ + 1/3³ + ... + 1/n³
+
+    let n = +prompt("Nhập vào n: ");
+    let S = 0;
+    for (let i = 1; i <= n ; i++) {
+        S += 1 / Math.pow(i, 3); // i = 2 => 1/2^3
+        // sqrt
+    }
+    console.log(`S = ${S}`);
+
+    /*
+    2. Học bài mảng rồi sử dụng kết hợp cả if và vòng lặp
+
+    => Tìm hiểu Mảng trong JS
+     */
+
 </script>
 </body>
 </html>
