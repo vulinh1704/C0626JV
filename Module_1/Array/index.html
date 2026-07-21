@@ -183,7 +183,7 @@
     // console.log(str);
 
     // replace
-    let numbers = [1, 34, 5, 10];
+    // let numbers = [1, 34, 5, 10];
     // xóa 1 vị trí bất kỳ
     //numbers.splice(1, 1); // bắt đầu từ vị trí 1 xóa đi 1 phần tử
 
@@ -192,8 +192,57 @@
 
     // thay thế
     // numbers.splice(1, 1, -10); // từ vị trí 1 xóa 1 phần tử và thêm -10 vào vị trí đó
-    numbers[1] = -10;
-    console.log(numbers);
+    // numbers[1] = -10;
+    // console.log(numbers);
+    // let a = [1, "Ning", true];
+
+
+    // let arr = [10, 20, 30]; // length => vị trí arr.length - 1
+    //         0   1   2
+    // console.log(arr[1]);
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     console.log(arr[i]);
+    // }
+
+    // arr[0] = -1;
+    // console.log(arr);
+
+    // push: thêm phần tử vào cuối mảng
+
+    // let arr = ["An", "Bình", "Chi"];
+    // console.log(arr.join("; "));
+
+    // let a = [1, 2];
+    // let b = [3, 4];
+    // let c = a.concat(b);
+    // console.log(c);
+
+    // let arr = [1, 2, 3, 4]; // => [1, -1, 2, 3 , 4]
+    //         0  1  2  3
+    // arr.splice(1, 0, -1); // từ vị trí 1 xóa đi 0 phần tử và thêm -1
+    // console.log(arr);
+
+    // arr.splice(2, 2); // có thể xóa nhiều phẩn tử
+    // console.log(arr);
+
+    // Mảng 2 chiều là mảng có các phần tử là các mảng con bên trong.
+
+    let arr = [
+        [1, 3, 30, 4],
+        [-1, -3, -2],
+        [0, 12, 13]
+    ];
+    // console.log(arr[1][1]); // -3
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if(arr[i][j] % 2 === 0) {
+                console.log(arr[i][j]);
+            }
+        }
+    }
+
 </script>
 </body>
 </html>

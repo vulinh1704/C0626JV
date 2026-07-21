@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm</title>
+</head>
+<body>
+
+<script>
+    /*
+    let avg1 = (8 + 9) / 2;
+    // console.log(avg1);
+    alert(avg1);
+
+    let avg2 = (7 + 6) / 2;
+    // console.log(avg2);
+    alert(avg2);
+
+    let avg3 = (10 + 8) / 2;
+    // console.log(avg3);
+    alert(avg3);
+
+     */
+
+
+    /*
+    + Lặp lại code cho 1 cùng 1 nhiệm vụ: tính trung bình cộng 2 số và in ra = console.log
+    + Khó bảo trí: thay vì in log thì cần in ra bằng alert => thay ở 3 vị trí => rủi ro dễ bug
+    và mất thời gian.
+
+    => Nên sử dụng hàm
+     function getAvg(a, b) {
+        let avg = (a + b) / 2;
+        // console.log(avg);
+        alert(avg);
+    }
+
+    getAvg(8, 9);
+    getAvg(7, 6);
+    getAvg(10, 8);
+     */
+
+    /*
+    Không bị lặp code
+    Dễ bảo trì
+    Chia nhỏ dự án
+     */
+
+
+    /*
+    Hàm:
+    + Function, Method (Phương thức)
+    + Là 1 nhóm được goi lại để thực hiện 1 nhiệm vụ (tác vụ)
+    nhất định tránh bị lặp code, khó bảo trì
+    + Đặt tên hàm (nền là động từ).
+     */
+
+    /*
+    KHAI BÁO hàm:
+    function <ten_ham>(<tham_so>){
+        <khoi_code_thuc_thi>;
+        return <gia_tri_tra_ve>;
+    }
+
+    Sử dụng hàm ~ GỌI HÀM:
+    <ten_ham>(<doi_so>);
+
+    + <tham_so>: là 1 biến sẽ đại diện cho giá trị khi gọi hàm sẽ được truyền vào.
+    + <doi_so>: là giá trị thực tế truyền vào hàm.
+    + Khi gặp từ từ khóa return hàm sẽ trả về giá trị và dừng hàm,
+     */
+
+    // function showName() {
+    //     let name = prompt("Nhập tên của bạn: ");
+    //     alert("Hello " + name);
+    // }
+    //
+    // showName(); // để quan sát vị trí khai báo Hover vào hàm +  Ctrl + Chuột
+    // showName();
+
+    // Tạo 1 hàm nhận vào 1 số và in ra tổng của số đó.
+    // function getSum(a, b) { // a và b là tham số
+    //     let sum = a + b;
+    //     return sum;
+    // }
+    // let sum1 = getSum(4, 5); // 4 và 5 sẽ là đối số thay cho a và b;
+    // let sum2 = getSum(6, 75); // lấy giá trí trả về của hàm gán cho sum2
+    // console.log("sum1", sum1);
+    // console.log("sum2", sum2);
+    // let avg = (sum1 + sum2) / 2;
+    // console.log("avg sum1 sum2", avg);
+
+    // Kiểu tham trị: (number, string, boolean)
+    // truyền tham chiếu: (object or array)
+    // function change(arr) {
+    //     arr.push(10);
+    // }
+    //
+    // let array = [1, 2 ,4];
+    // change(array);
+    // console.log(array);
+
+    /*
+     Bài 1 — Hàm kiểm tra số chẵn/lẻ:
+     Viết hàm isEven(number) trả về true nếu number là số chẵn, false nếu là số lẻ.
+     Gọi thử với ít nhất 2 giá trị khác nhau và in kết quả.
+     */
+    // function isEven(number) {
+    //     if (number % 2 === 0) {
+    //         return true; // trả về dừng hàm
+    //     }
+    //     return false;
+    // }
+
+    /*
+    function isEven(number) {
+        return number % 2 === 0;
+    }
+    => được nhưng khó hiểu.
+     */
+
+    // let test1 = isEven(7);
+    // let test2 = isEven(8);
+    // console.log("test1: 7", test1);
+    // console.log("test2: 8", test2);
+
+    // let và var
+
+    /*
+    - Cho phép sử dụng biến trước khi khai báo:
+    let: không
+    var: có
+
+    - Cho phép khai báo lại biến
+    let: không
+    var: có
+
+    - Phạm vi sử dụng:
+    + let: giới hạn trong block scope (trong các khối if, for, while, {})
+    + var: giới hạn trong function scope
+
+
+    - Có 2 loại biến: toàn cục và cục bộ:
+    + Biến toàn cục là biến không nằm trong khối hay function nào, có thể sử dụng được từ lúc khai báo
+    đến hết chương trỉnh.
+    + Biến cục bộ: là biến trong khối hoặc function, sử dụng từ lúc khai báo đến hết khối hoặc function
+     */
+
+    // if(true) {
+    //     var a = 10; // toàn cục
+    // }
+    // console.log(a);
+
+    // function test() {
+    //     var a = 10;
+    // }
+    // console.log(a);
+
+    /*
+    Bài 2 — Hàm tính giai thừa:
+    Viết hàm factorial(n) trả về giá trị n! (dùng vòng lặp).
+    Gọi thử với n = 5 và in kết quả.
+    */
+
+    function factorial(number) {
+        let result = 1;
+        for (let i = number; i >= 1 ; i--) {
+            result *= i;
+        }
+        return result;
+    }
+
+    let number = +prompt("Nhập 1 số: ");
+    let r = factorial(number);
+    console.log(r);
+
+
+</script>
+</body>
+</html>
