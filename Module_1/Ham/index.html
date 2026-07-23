@@ -162,17 +162,57 @@
     Gọi thử với n = 5 và in kết quả.
     */
 
-    function factorial(number) {
-        let result = 1;
-        for (let i = number; i >= 1 ; i--) {
-            result *= i;
+    // function factorial(number) {
+    //     let result = 1;
+    //     for (let i = number; i >= 1 ; i--) {
+    //         result *= i;
+    //     }
+    //     return result;
+    // }
+    //
+    // let number = +prompt("Nhập 1 số: ");
+    // let r = factorial(number);
+    // console.log(r);
+
+
+    // function calculateBMI(weight, height) {
+    //     let BMI = weight / Math.pow(height, 2);
+    //     if(BMI < 18.5) {
+    //         return "Gầy";
+    //     } else if(BMI <= 24.9) {
+    //         return "Bình thường";
+    //     } else if(BMI >= 25) {
+    //         return "Thừa cân";
+    //     }
+    // }
+    //
+    // let ningBMI = calculateBMI(76, 1.75);
+    // console.log("Ning BMI", ningBMI);
+
+
+    // "ning-124333vulinh" => lenght
+    //  0123
+
+
+    function countVowels(str) {
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+            let char = str.charAt(i);
+            // let charPrev = str.charAt(i - 1);
+            // if (charPrev && charPrev === "-") {
+            //     if (!isNaN(char)) {
+            //         count++;
+            //     }
+            // }
+            if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u") {
+                count++;
+            }
         }
-        return result;
+        return count;
     }
 
-    let number = +prompt("Nhập 1 số: ");
-    let r = factorial(number);
-    console.log(r);
+    let c = countVowels("ning-124333vulinh")
+    console.log(c);
 
 
 </script>

@@ -1,0 +1,17 @@
+.menu-btn {
+    background-color: #2e2ee8;
+    color: white;
+    border: none;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.edit-btn {
+    background-color: #bfbf10;
+    color: white;
+    border: none;
+}
