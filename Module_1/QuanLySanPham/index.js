@@ -1,11 +1,31 @@
-let products = ["Bánh mì", "Kẹo mút", "Mì tôm", "Rong biển"];
+
+function saveData() { // mỗi khi mảng cập nhật về dữ liệu (CUD)
+    localStorage.setItem("products", JSON.stringify(products));
+}
+
+function getData() {
+    let data = localStorage.getItem("products");
+    if(data) {
+        return JSON.parse(data);
+    } else {
+        return [];
+    }
+}
+
+let products = getData();
+console.log(products);
 
 // CURD: Create, Update, Read, Delete
+
+function searchName() {
+    let data = document.getElementById("search-name").value;
+    showProductList(data);
+}
 
 function showHome() {
     document.getElementById("main").innerHTML = `
     <h3>Trang chủ</h3>
-    <input type="text" placeholder="Nhập tên sản phẩm">
+    <input type="text" placeholder="Nhập tên sản phẩm" id="search-name" oninput="searchName()">
     <br>
     <br>
     <table border="1">
@@ -19,7 +39,7 @@ function showHome() {
         </tbody>
     </table>
     `;
-    showProductList();
+    showProductList("");
 }
 
 function showAddForm() {
@@ -34,6 +54,7 @@ function showAddForm() {
 function addProduct() {
     let productName = document.getElementById("product-name").value;
     products.push(productName);
+    saveData();
     showHome();
 }
 
@@ -42,6 +63,7 @@ function removeProduct(removeIndex) {
     let isConfirm = confirm("Bạn chắc chắn muốn xóa chứ?");
     if (isConfirm) {
         products.splice(removeIndex, 1);
+        saveData();
         showHome();
     }
 }
@@ -58,28 +80,41 @@ function showUpdateForm(updateIndex) {
 function updateProduct(updateIndex) {
     let newProductName = document.getElementById("product-name").value;
     products[updateIndex] = newProductName;
+    saveData();
     showHome();
 }
 
 // Read
-function showProductList() {
+function showProductList(nameSearch) {
     let htmlStr = ``;
     for (let i = 0; i < products.length; i++) {
-        htmlStr += `
-        <tr>
-            <td>${i + 1}</td>
-            <td>${products[i]}</td>
-            <td>
-                <button class="delete-btn" onclick="removeProduct(${i})">Xóa</button>
-            </td>
-            <td>
-                <button class="edit-btn" onclick="showUpdateForm(${i})">Sửa</button>
-            </td>
-        </tr>
+        let nameProduct = products[i].toLowerCase();
+        if (nameProduct.includes(nameSearch.toLowerCase())) {
+            htmlStr += `
+            <tr>
+                <td>${i + 1}</td>
+                <td>${products[i]}</td>
+                <td>
+                    <button class="delete-btn" onclick="removeProduct(${i})">Xóa</button>
+                </td>
+                <td>
+                    <button class="edit-btn" onclick="showUpdateForm(${i})">Sửa</button>
+                </td>
+            </tr>
         `
+        }
     }
-    console.log(htmlStr);
     document.getElementById("list").innerHTML = htmlStr;
 }
 
-showHome();
+
+showHome(); // undefined
+
+
+
+// let arr = [1, 2 ,3];
+// //                          Biến mảng thành chuỗi nhưng giữ nguyên định dạng mảng
+// localStorage.setItem("arr", JSON.stringify(arr));
+// let arr2 = JSON.parse(localStorage.getItem("arr"));
+// console.log(arr2);
+// console.log(typeof arr2);

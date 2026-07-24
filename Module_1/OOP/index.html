@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    // class: là khuôn (bản thiết kế) của các đối tượng car cụ thể
+    class Car {
+        name; // thuộc tính
+        color;
+
+        // Hàm tạo: Nhà máy nhận vào các dữ liệu và lắp ráp thành một đối tuợng hoàn chỉnh
+        constructor(nameInput, colorInput) {
+            // this: đại diện cho đối tượng được tạo ra.
+            this.name = nameInput;
+            this.color = colorInput;
+        }
+
+        start() { // phương thức ~ method <=> hàm ~ function
+            // this: đại diện cho ddối tượng đang sử dụng hàm
+            console.log(this.name + " is starting");
+        }
+    }
+
+    // Khởi tạo 1 đối tượng (Object) cụ thể từ class Car;
+    let c1 = new Car("Audi", "Trắng");
+    // Cách truy xuất thuộc tính và phương thức;
+    c1.name = "Audi VIP";
+    console.log(c1.name);
+    c1.start();
+
+    let c2 = new Car("BMW", "Hồng");
+    c2.start();
+
+    // object literal
+    let c3 = {
+        name: "BMW",
+        color: "Hồng",
+        start: function () {
+            console.log("Car is starting");
+        }
+    }
+
+    console.log("Name c3", c3.name);
+    c3.start();
+
+</script>
+</body>
+</html>
