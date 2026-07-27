@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    // class Animal {
+    //     name;
+    //     sound;
+    //
+    //     constructor(nameInp, soundInp) {
+    //         this.name = nameInp;
+    //         this.sound = soundInp;
+    //     }
+    //
+    //     makeSound() {
+    //         console.log(`${this.name} kêu ${this.sound}`)
+    //     }
+    // }
+    //
+    // let obj1 = new Animal("Dog", "Go Go");
+    // obj1.makeSound();
+    // let obj2 = new Animal("Mèo", "Meo Meo");
+    // obj2.makeSound();
+    // let obj3 = new Animal("Bò", "Ò Ò");
+    // obj3.makeSound();
+
+    class BankAccount {
+        owner;
+        balance;
+
+        constructor(ownerInput, balanceInput) {
+            this.owner = ownerInput;
+            if (balanceInput < 0) {
+                this.balance = 0;
+            } else {
+                this.balance = balanceInput;
+            }
+        }
+
+        getBalance() {
+            return this.balance;
+        }
+
+        deposit(amount) {
+            if (amount > 0) {
+                this.balance = this.balance + amount;
+            } else {
+                console.log("Số tiền nạp vào phải lớn hơn 0");
+            }
+        }
+
+        withdraw(amount) {
+            if (amount > 0 && amount <= this.balance) { // 0 < amount <= this.balance
+                this.balance = this.balance - amount;
+            } else {
+                console.log("Số tiền rút vào phải lớn hơn 0");
+            }
+        }
+    }
+
+    let bankAcc = new BankAccount("Ning", 1);
+    let ningBalance = bankAcc.getBalance();
+    console.log("Balance: ", ningBalance);
+    bankAcc.deposit(1.5);
+    ningBalance = bankAcc.getBalance();
+    console.log("Sau khi nạp: ", ningBalance);
+    bankAcc.withdraw(0.5);
+    ningBalance = bankAcc.getBalance();
+    console.log("Sau khi rút: ", ningBalance);
+</script>
+</body>
+</html>
