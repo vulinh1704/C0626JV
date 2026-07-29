@@ -1,23 +1,77 @@
-.menu-btn {
-    background-color: #2e2ee8;
-    color: white;
-    border: none;
+/* =========================
+   LOGIN - REGISTER
+========================= */
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#dfe9ff,#f7fbff);
 }
 
-.delete-btn {
-    background-color: red;
-    color: white;
-    border: none;
+.auth-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
 
-.edit-btn {
-    background-color: #bfbf10;
-    color: white;
-    border: none;
+.auth-box{
+    width:340px;
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-td img {
-    width: 80px;
-    height: 60px;
-    object-fit: cover;
+.auth-box h1{
+    color:#2e2ee8;
+    margin-bottom:30px;
+}
+
+.auth-box input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    box-sizing:border-box;
+    font-size:15px;
+}
+
+.auth-box input:focus{
+    outline:none;
+    border-color:#2e2ee8;
+}
+
+.auth-btn{
+    width:100%;
+    padding:12px;
+    background:#2e2ee8;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.auth-btn:hover{
+    background:#1f1fc7;
+    transform:translateY(-2px);
+}
+
+.switch-form{
+    margin-top:18px;
+    color:#666;
+}
+
+.switch-form span{
+    color:#2e2ee8;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.switch-form span:hover{
+    text-decoration:underline;
 }

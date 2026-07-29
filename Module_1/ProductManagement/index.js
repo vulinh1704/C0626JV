@@ -166,8 +166,6 @@ function showProductList(nameSearch) {
     document.getElementById("list").innerHTML = htmlStr;
 }
 
-showHome(); // undefined
-
 /*
 Hoàn thiện CRUD tương tự demo => Dự án cuối module
 Thêm tính năng tìm kiếm theo khoảng giá
