@@ -96,11 +96,11 @@ public class ProductMenu {
 
 /*
 Prompt 1: Copy các file (Thêm 1 dòng: "Tổng các file này lại cho tôi và sẵn sàng trả lời các cấu hỏi")
-Prompt 2: Vẽ 1 sơ đồ về luồng hoạt đồng cho tôi (Có thể kèm chú thích trong ảnh)
+Prompt 2: Vẽ 1 sơ đồ về luồng hoạt đồng cho tôi (Có thể kèm chú thích trong ảnh) ~ nên sử dụng Claude Code.
 Prompt 3: Hỏi đáp với AI những thắc để giúp bạn hiểu hơn(Ví dụ: Ý nghĩa sử dụng ArraList trong ProductManager)
 
 Hoàn thiện CRUD, bổ sung các tính năng:
  + Hiển thị chi tiết sản phẩm.
  + Tìm kiếm theo khoảng giá.
  + Tìm kiếm theo tên gần đúng.
- */
+*/
