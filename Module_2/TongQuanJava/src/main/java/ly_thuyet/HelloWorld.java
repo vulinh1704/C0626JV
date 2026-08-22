@@ -1,3 +1,5 @@
+package ly_thuyet;
+
 public class HelloWorld {
 
     // main + tab: tạo ra hàm main để chạy chương trình
@@ -15,6 +17,18 @@ public class HelloWorld {
         char c = 'k';
         System.out.println(c);
         float f = 4.5f;
+
+        // Kiểu nguyên thuỷ (char, short, long, int,..)
+        // Kiểu đối tượng (Chữ cái đầu tiên viêt hoa)
+        String str = "Vũ Linh";
+
+        final double PI = 3.14; // hằng số
+        // PI = 3.15; // lỗi
+
+        String className = "C04";
+        String $ = "Vũ Linh";
+        String class_name = "Trương Đăng";
+        long number = 1000000000000000000l;
     }
 }
 
@@ -24,7 +38,7 @@ Khai báo biến:
 int: số nguyên (long, short, byte)
 double: số thực (float)
 String: chuỗi
-boolean: kiểu đúng sai
+boolean: kiểu đúng sai (true/false)
 char: ký tự
 
 Biến trong java đã đươợc khai báo thì không khai báo lại,

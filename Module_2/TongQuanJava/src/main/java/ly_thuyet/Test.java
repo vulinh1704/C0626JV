@@ -1,5 +1,9 @@
+package ly_thuyet;
+
 public class Test {
     public static void main(String[] args) {
+        int a1;
+        int b1, b2, b3 = 5;
         int a = 10;
         int b = 20;
         // Toán tử toán học: + - * / %
