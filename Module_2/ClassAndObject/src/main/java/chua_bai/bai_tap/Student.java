@@ -1,4 +1,4 @@
-package chua_bai;
+package chua_bai.bai_tap;
 
 public class Student {
     /*
