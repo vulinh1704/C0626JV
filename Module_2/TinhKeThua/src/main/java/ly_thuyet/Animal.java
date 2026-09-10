@@ -1,3 +1,5 @@
+package ly_thuyet;
+
 public class Animal {
     protected String name;
 
@@ -8,10 +10,10 @@ public class Animal {
     public Animal() {}
 
     private void test() {
-        System.out.println("Animal test");
+        System.out.println("ly_thuyet.Animal test");
     }
 
     public void run() {
-        System.out.println("Animal run");
+        System.out.println("ly_thuyet.Animal run");
     }
 }
