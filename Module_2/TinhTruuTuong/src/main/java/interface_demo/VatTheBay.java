@@ -2,6 +2,7 @@ package interface_demo;
 
 public interface VatTheBay {
     public final static String name = "VatTheBay";
+    int VAN_TOC_TRUNG_BINH = 30;
     public abstract void bay();
     void haCanh();
 }
