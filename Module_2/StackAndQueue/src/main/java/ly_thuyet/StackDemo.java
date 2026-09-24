@@ -1,3 +1,5 @@
+package ly_thuyet;
+
 import java.util.Stack;
 
 public class StackDemo {
