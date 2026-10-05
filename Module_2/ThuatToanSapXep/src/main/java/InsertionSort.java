@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class InsertionSort {
+    public static int a;
     public static void main(String[] args) {
         int[] arr = {3, 4, 2, 12, 5, 9};
         System.out.println("Before Sorting: " + Arrays.toString(arr));
