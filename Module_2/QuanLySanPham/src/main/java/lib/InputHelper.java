@@ -27,6 +27,18 @@ public class InputHelper {
         } while (true);
     }
 
+
+    public static long inputLong() {
+        do {
+            try {
+                long data = Long.parseLong(input.nextLine());
+                return data;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input, Please try again.");
+            }
+        } while (true);
+    }
+
     public static String inputString() {
         return input.nextLine();
     }

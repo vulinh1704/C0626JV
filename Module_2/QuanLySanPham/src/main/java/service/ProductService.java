@@ -1,6 +1,7 @@
 package service;
 
 import entity.Product;
+import lib.errors.DataNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,16 @@ public class ProductService implements IService<Product> {
 
     public ProductService() {
         list = new ArrayList<>();
+    }
+
+    public List<Product> findAllByContains(String keyword) {
+        List<Product> listFound = new ArrayList<>();
+        for (Product item : list) {
+           if(item.getName().toLowerCase().contains(keyword.toLowerCase())) {
+               listFound.add(item);
+           }
+        }
+        return listFound;
     }
 
     @Override
@@ -45,6 +56,12 @@ public class ProductService implements IService<Product> {
                 return i;
             }
         }
-        return -1;
+        throw new DataNotFoundException();
+    }
+
+    @Override
+    public Product findById(long id) {
+        int index = this.findIndexById(id);
+        return this.list.get(index);
     }
 }

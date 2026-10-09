@@ -29,4 +29,9 @@ public class CategoryService implements IService<Category> {
     public int findIndexById(long id) {
         return 0;
     }
+
+    @Override
+    public Category findById(long id) {
+        return null;
+    }
 }
