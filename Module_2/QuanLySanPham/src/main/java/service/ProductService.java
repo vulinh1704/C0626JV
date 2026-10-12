@@ -2,23 +2,25 @@ package service;
 
 import entity.Product;
 import lib.errors.DataNotFoundException;
+import repository.ProductRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductService implements IService<Product> {
+    private ProductRepository productRepository = new ProductRepository();
     private List<Product> list;
 
     public ProductService() {
-        list = new ArrayList<>();
+        list = productRepository.read(); // đọc dữ liệu từ File
     }
 
     public List<Product> findAllByContains(String keyword) {
         List<Product> listFound = new ArrayList<>();
         for (Product item : list) {
-           if(item.getName().toLowerCase().contains(keyword.toLowerCase())) {
-               listFound.add(item);
-           }
+            if (item.getName().toLowerCase().contains(keyword.toLowerCase())) {
+                listFound.add(item);
+            }
         }
         return listFound;
     }
@@ -29,18 +31,21 @@ public class ProductService implements IService<Product> {
         // kiểm tra các giá trị thuộc tính
         //....
         this.list.add(newProduct);
+        this.productRepository.write(list);
     }
 
     @Override
     public void delete(long id) {
         int index = this.findIndexById(id);
         this.list.remove(index);
+        this.productRepository.write(list);
     }
 
     @Override
     public void update(long id, Product product) {
         int index = this.findIndexById(id);
         this.list.set(index, product);
+        this.productRepository.write(list);
     }
 
     @Override
@@ -53,6 +58,8 @@ public class ProductService implements IService<Product> {
         for (int i = 0; i < this.list.size(); i++) {
             Product product = this.list.get(i);
             if (product.getId() == id) {
+//                System.out.println("[ProductService.findIndexById.product]" + product.getId() + "," + product.getName());
+//                System.out.println("ProductService.findIndexById.id" + id);
                 return i;
             }
         }
@@ -65,3 +72,18 @@ public class ProductService implements IService<Product> {
         return this.list.get(index);
     }
 }
+
+/*
+ Cách Debug
+ -> Focus vào tính năng
+ -> Đặt log của các biến trong các method của tính năng đó
+*/
+
+/*
+Cursor, Github Copilot, Claude, Codex
+*/
+
+/*
+Luyện tập cách debug
+Áp dụng đọc ghi file vào dự án.
+ */
