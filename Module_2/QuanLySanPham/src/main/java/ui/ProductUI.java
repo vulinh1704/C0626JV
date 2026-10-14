@@ -1,25 +1,27 @@
 package ui;
 
+import entity.Category;
 import entity.Product;
 import lib.InputHelper;
 import lib.errors.DataNotFoundException;
+import service.CategoryService;
 import service.ProductService;
 
 import java.util.List;
 
 public class ProductUI {
-    private static ProductService productService = new ProductService();
+    private static final ProductService productService = ProductService.getObject();
+    private static final CategoryService categoryService = CategoryService.getObject();
 
     public static void showMainMenu() {
         int choice;
         do {
-            System.out.println("====== Main Menu =======");
+            System.out.println("====== Product Manager Menu =======");
             System.out.println("1. Add");
             System.out.println("2. Edit");
             System.out.println("3. Delete");
             System.out.println("4. Get All");
             System.out.println("5. Search by name");
-            System.out.println("0. Exit");
             System.out.println("Enter your choice: ");
             choice = InputHelper.inputInt();
             switch (choice) {
@@ -65,8 +67,30 @@ public class ProductUI {
         String name = InputHelper.inputString();
         System.out.println("Enter product price: ");
         double price = InputHelper.inputDouble();
-        Product newProduct = new Product(id, name, price);
+        long categoryId = inputCategoryId();
+        Product newProduct = new Product(id, name, price, categoryId);
         productService.add(newProduct);
+        System.out.println("Product added");
+    }
+
+    private static long inputCategoryId() {
+        System.out.println("==== List Category ====");
+        List<Category> categories = categoryService.getAll();
+        int count = 1;
+        for (Category item : categories) {
+            System.out.println(count + ". Id: " + item.getCategoryId() + ", Name: " + item.getCategoryName());
+            count++;
+        }
+        System.out.println("Enter category id: ");
+        while (true) {
+            long categoryId = InputHelper.inputLong();
+            for (Category item : categories) {
+                if (item.getCategoryId() == categoryId) {
+                    return categoryId;
+                }
+            }
+            System.out.println("Invalid category id, please try again");
+        }
     }
 
     public static void editUI() {
@@ -79,8 +103,12 @@ public class ProductUI {
             String name = InputHelper.inputString();
             System.out.println("Enter product price(old price: " + productFound.getPrice() + ")");
             double price = InputHelper.inputDouble();
+            Category categoryFound = categoryService.findById(productFound.getCategoryId());
+            System.out.println("Old category name: " + categoryFound.getCategoryName());
+            long categoryId = inputCategoryId();
             productFound.setName(name);
             productFound.setPrice(price);
+            productFound.setCategoryId(categoryId);
             productService.update(id, productFound);
             System.out.println("Product updated!");
         } catch (DataNotFoundException e) {
@@ -110,7 +138,8 @@ public class ProductUI {
         List<Product> list = productService.getAll();
         int count = 1;
         for (Product item : list) {
-            System.out.println(count + ". Id: " + item.getId() + ", Name: " + item.getName() + ", Price: " + item.getPrice());
+            Category category = categoryService.findById(item.getCategoryId());
+            System.out.println(count + ". Id: " + item.getId() + ", Name: " + item.getName() + ", Price: " + item.getPrice() + ", Category name: " + category.getCategoryName());
             count++;
         }
     }

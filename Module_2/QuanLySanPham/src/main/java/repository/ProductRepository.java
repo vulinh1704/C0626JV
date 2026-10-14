@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRepository implements IRepository<Product> {
-    private static final String FILE_NAME = "data/products.txt";
+    private static final String FILE_NAME = "data/products.csv";
 
     @Override
     public void write(List<Product> list) {
         String dataStr = "";
         for (Product item : list) {
-            dataStr += item.getId() + "," + item.getName() + "," + item.getPrice() + "\n";
+            dataStr += item.getId() + "," + item.getName() + "," + item.getPrice() + "," + item.getCategoryId() + "\n";
         }
         try {
             FileWriter fileWriter = new FileWriter(FILE_NAME);
@@ -35,11 +35,12 @@ public class ProductRepository implements IRepository<Product> {
             while (true) {
                 String line = bufferedReader.readLine(); // 121,Banh mi,3000.0
                 if (line == null) break;
-                String[] data = line.split(","); // ["121", "Banh mi", "3000.0"]
+                String[] data = line.split(","); // ["121", "Banh mi", "3000.0", "1"]
                 long id = Long.parseLong(data[0]); // "121" => parseLong -> 121
                 String name = data[1];
                 double price = Double.parseDouble(data[2]);
-                Product item = new Product(id, name, price);
+                long categoryId = Long.parseLong(data[3]);
+                Product item = new Product(id, name, price, categoryId);
                 list.add(item);
             }
             bufferedReader.close();

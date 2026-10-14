@@ -10,9 +10,14 @@ import java.util.List;
 public class ProductService implements IService<Product> {
     private ProductRepository productRepository = new ProductRepository();
     private List<Product> list;
+    private final static ProductService productService = new ProductService();
 
-    public ProductService() {
+    private ProductService() {
         list = productRepository.read(); // đọc dữ liệu từ File
+    }
+
+    public static ProductService getObject() {
+        return productService;
     }
 
     public List<Product> findAllByContains(String keyword) {

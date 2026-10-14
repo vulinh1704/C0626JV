@@ -1,7 +1,8 @@
-import ui.ProductUI;
+import ui.MainUI;
 
 public class Main {
+
     public static void main(String[] args) {
-        ProductUI.showMainMenu();
+        MainUI.showMainMenu();
     }
 }
