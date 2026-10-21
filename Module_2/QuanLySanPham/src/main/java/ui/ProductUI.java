@@ -6,6 +6,7 @@ import lib.InputHelper;
 import lib.errors.DataNotFoundException;
 import service.CategoryService;
 import service.ProductService;
+import validator.ProductValidator;
 
 import java.util.List;
 
@@ -64,7 +65,7 @@ public class ProductUI {
         System.out.println("====== Add Menu ======");
         long id = System.currentTimeMillis() / 1000L; // số giây
         System.out.println("Enter product name: ");
-        String name = InputHelper.inputString();
+        String name = ProductValidator.inputName();
         System.out.println("Enter product price: ");
         double price = InputHelper.inputDouble();
         long categoryId = inputCategoryId();

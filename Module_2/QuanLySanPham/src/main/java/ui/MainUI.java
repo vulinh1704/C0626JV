@@ -9,7 +9,8 @@ public class MainUI {
             System.out.println("====== NING STORE =======");
             System.out.println("1. Manager Category");
             System.out.println("2. Manager Product");
-            System.out.println("0. Exit");
+            System.out.println("3. Manager User"); // thêm, sửa, xóa, chặn
+            System.out.println("0. Logout");
             System.out.println("Enter your choice: ");
             choice = InputHelper.inputInt();
             switch (choice) {

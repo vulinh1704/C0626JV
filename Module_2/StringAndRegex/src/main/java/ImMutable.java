@@ -13,6 +13,9 @@ public class ImMutable {
 class Main {
     public static void main(String[] args) {
         ImMutable i = new ImMutable("Test");
-        System.out.println(i.getValue());
+//        System.out.println(i.getValue());
+        String str = "Ning";
+        String newStr = str.toUpperCase();
+        System.out.println(newStr);
     }
 }
